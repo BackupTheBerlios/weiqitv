@@ -1,0 +1,18 @@
+ -----
+ weiqitv
+ -----
+ dagnu
+ -----
+ 2010-03-13
+ -----
+
+Documentation
+
+ weiqitv is a plattform to watch live and recorded weiqi (a.k. as baduk and go) games 
+ on web enabled devices like PC, TV, smartphone and game console.
+  
++-----+
+
+mvn site
+
++-----+
