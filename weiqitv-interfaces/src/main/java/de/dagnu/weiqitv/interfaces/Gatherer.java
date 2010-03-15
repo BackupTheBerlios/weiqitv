@@ -1,6 +1,5 @@
 package de.dagnu.weiqitv.interfaces;
 
-
 public interface Gatherer {
 
 	/**
@@ -13,6 +12,8 @@ public interface Gatherer {
 	boolean isConnected();
 
 	boolean login(String user, String password);
+
+	boolean loginAnonymous();
 
 	void logout();
 

@@ -40,10 +40,8 @@ public abstract class RankCriterion implements Criterion {
 		}
 
 		if (matcher.matches() == false) {
-			String message = value + " doesn't match regex: "
-					+ RANK_PATTERN.toString();
-			log.error(message);
-			throw new IllegalArgumentException(message);
+			throw new IllegalArgumentException( //
+					value + " doesn't match regex: " + RANK_PATTERN.toString());
 		} else {
 			int nr = Integer.parseInt(matcher.group(1));
 			String type = matcher.group(2);
@@ -51,9 +49,8 @@ public abstract class RankCriterion implements Criterion {
 				log.debug("set rank " + value);
 				rank = value;
 			} else {
-				String message = value + " is an invalid rank";
-				log.error(message);
-				throw new IllegalArgumentException(message);
+				throw new IllegalArgumentException( //
+						value + " is an invalid rank");
 			}
 		}
 	}

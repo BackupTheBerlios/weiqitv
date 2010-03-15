@@ -27,14 +27,12 @@ public abstract class HandicapCriterion implements Criterion {
 				log.debug("set handicap " + value);
 				handicap = value;
 			} else {
-				String message = value + " is an invalid handicap";
-				log.error(message);
-				throw new IllegalArgumentException(message);
+				throw new IllegalArgumentException( //
+						value + " is an invalid handicap");
 			}
 		} catch (NumberFormatException e) {
-			String message = "unsupported handicap value: " + value;
-			log.error(message);
-			throw new IllegalArgumentException(message, e);
+			throw new IllegalArgumentException( //
+					"unsupported handicap value: " + value, e);
 		}
 	}
 }
